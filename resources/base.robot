@@ -1,21 +1,19 @@
-* Settings *
-Documentation       Tudo deve começar por aqui
+*** Settings ***
+Documentation       Tudo deve começar aqui
 
-Library         SikuliLibrary
+Library     SikuliLibrary
 
-Resource        actions/pdv.robot
-
-* Keywords *
-Carrega os Elementos do App
+*** Keywords ***
+Carregar os Elementos do app
     Add Image Path      ${EXECDIR}\\resources\\elements
 
-Inicia Sessão
-    Carrega os Elementos do App
-    Click           icone-app.png
+Iniciar Sessáo
+    Carregar os Elementos do app
+    Click       icone-app.png
 
-Encerrar Sessão
+Encerrar Sessáo
     Stop Remote Server
 
 Finaliza Teste
     Capture Screen
-    Close Application       BugBakery
+    Close Application   BugBakery
